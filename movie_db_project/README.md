@@ -1,2 +1,2 @@
-# web_projects
-My web projects
+# Movie DB
+My PHP MySQL based mini database project
