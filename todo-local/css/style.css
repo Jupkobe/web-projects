@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Space Mono', monospace;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	--bg-color: #f6f6f6;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+#app {
+	background-color: var(--bg-color);
+	display: flex;
+	flex-flow: column wrap;
+	border: 1px solid black;
+	border-radius: 6px;
+	box-shadow: 2px;
+	align-items: center;
+	padding: 1rem;
+}
+
+#app h1 {
+	margin-bottom: 1.5rem;
+}
+
+#inputs {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1rem;
+	margin-bottom: .5rem;
+	border-bottom: 1px solid black;
+}
+
+#inputs input,
+#inputs button {
+	padding: .3rem .5rem;
+}
+
+#todo-list {
+	width: 30vw;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 1rem;
+	justify-content: space-around;
+}
+
+.todo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	border: 1px solid black;
+	padding: .5rem;
+	margin: .2rem;
+	color: black;
+	border-radius: 3px;
+}
+
+.todo i {
+	margin: 0 .25rem;
+	font-size: x-large;
+}
+
+.completed {
+	background-color: lightgrey;
+}
+
+.completed p {	
+	text-decoration: line-through;
+}
