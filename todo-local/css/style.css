@@ -13,11 +13,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem;
+	padding: 1rem;
 }
 
 #app {
 	background-color: var(--bg-color);
+	min-width: 30%;
 	display: flex;
 	flex-flow: column wrap;
 	border: 1px solid black;
@@ -32,12 +33,20 @@
 }
 
 #inputs {
-	width: 90%;
+	width: 100%;
 	display: flex;
+	flex-flow: wrap;
 	justify-content: center;
 	padding-bottom: 1rem;
 	margin-bottom: .5rem;
 	border-bottom: 1px solid black;
+}
+
+#inputs form {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	
 }
 
 #inputs input,
@@ -45,11 +54,15 @@
 	padding: .3rem .5rem;
 }
 
+#inputs input {
+	width: 85%;
+}
+
 #todo-list {
-	width: 30vw;
+	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
-	padding: 1rem;
+	padding: 1rem 0;
 	justify-content: space-around;
 }
 
@@ -76,4 +89,14 @@
 
 .completed p {	
 	text-decoration: line-through;
+}
+
+@media only screen and (max-width: 600px) {
+	#app {
+		min-width: 100%;
+	}
+	
+	#inputs input {
+		width: 75%;
+	}
 }
