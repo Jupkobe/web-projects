@@ -8,6 +8,10 @@
 	--bg-color: #f6f6f6;
 }
 
+a:visited {
+	color: black;
+}
+
 .container {
 	width: 100%;
 	display: flex;
