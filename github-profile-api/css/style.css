@@ -1,0 +1,170 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Space Mono', monospace;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	--bg-color: #f6f6f6;
+}
+
+a,
+a:link,
+a:visited {
+	color: black;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+#app {
+	background-color: var(--bg-color);
+	min-width: 30%;
+	max-width: 30%;
+	display: flex;
+	flex-flow: column wrap;
+	border: 1px solid black;
+	border-radius: 6px;
+	box-shadow: 2px;
+	align-items: center;
+	padding: 1rem;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+	text-wrap: nowrap;
+}
+
+#inputs {
+	width: 100%;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	padding-bottom: 1rem;
+	margin-bottom: .5rem;
+}
+
+#inputs form {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+#inputs input,
+#inputs button {
+	padding: .3rem .5rem;
+}
+
+#inputs input {
+	width: 85%;
+}
+
+#inputs input:focus {
+	border: 1px solid black;
+}
+
+.border-bottom {	
+	border-bottom: 1px solid black;
+}
+
+.display-none {
+	display: none;
+}
+
+#result {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 1rem 0;
+	justify-content: space-around;
+}
+
+#user {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;	
+	padding-bottom: 1rem;
+}
+
+#avatar {
+	width: 40%;
+}
+
+#avatar img {
+	object-fit: contain;
+	width: 100%;
+}
+
+#user-data {
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 2px;
+}
+
+#user-data a,
+#user-data a:link,
+#user-data a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+h2 {
+	display: inline;
+}
+
+p {
+	display: inline;
+}
+
+#repos {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+#repos span {
+	padding: 0.5rem 0;
+}
+
+.repo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	border: 1px solid black;
+	padding: .5rem;
+	margin: .2rem 0;
+	color: black;
+	border-radius: 3px;
+}
+
+.repo i {
+	margin: 0 .25rem;
+	font-size: x-large;
+}
+
+footer {
+	width: 100%;
+	padding-top: .5rem;
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	#app {
+		min-width: 100%;
+	}
+	
+	#inputs input {
+		width: 75%;
+	}
+}
