@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Space Mono', monospace;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	--bg-color: #f6f6f6;
+}
+
+a,
+a:link,
+a:visited {
+	color: black;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+#app {
+	background-color: var(--bg-color);
+	min-width: 25%;
+	max-width: 25%;
+	display: flex;
+	flex-flow: column wrap;
+	border: 1px solid black;
+	border-radius: 6px;
+	box-shadow: 2px;
+	align-items: center;
+	padding: 1rem;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+	text-wrap: nowrap;
+}
+
+#error {
+	font-weight: 600;
+	color: red;
+	margin-bottom: 1rem;
+	display: none;
+}
+
+#display {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	width: 100%;
+	height: 100px;
+	border: 1px solid black;
+	border-radius: 3px;
+	padding: 1rem;
+	margin-bottom: .5rem;
+}
+
+#display p {
+	font-size: 3rem;
+	overflow-x: auto;
+}
+
+#keypad {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 5px;
+	padding: 1rem 0;
+	justify-content: space-around;
+}
+
+.key {
+	flex: 1 0 22%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	font-size: 3rem;
+}
+
+#functions {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+footer {
+	width: 100%;
+	padding-top: .5rem;
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	#app {
+		min-width: 100%;
+	}
+}
