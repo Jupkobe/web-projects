@@ -84,15 +84,14 @@ async function fetchRepos(repos_url) {
 function displayRepos(repos) {
     const reposElem = document.querySelector("#repos");
     reposElem.innerHTML = "<span><h2>Repos</h2></span>";
-    reposElem.style = "";
+
+    showElem(reposElem);
 
     repos.forEach((repo) => {
         let div = document.createElement("div");
         div.className = "repo";
-        let desc;
-
-        if (!repo.description) desc = "";
-        else desc = repo.description.length > 25 ? repo.description.substring(0, 22) + "..." : repo.description;
+        
+        let desc = repo.description ?? "";
 
         div.innerHTML = `
         <span>
@@ -121,6 +120,7 @@ function hideElem (elem) {
 function showElem (elem) {
     elem.style = "";
 }
+
 
 function init() {
     document.querySelector("form").addEventListener("submit", findUser);

@@ -148,6 +148,10 @@ p {
 	border-radius: 3px;
 }
 
+.repo span {
+	width: 60%;
+}
+
 .repo i {
 	margin: 0 .25rem;
 	font-size: x-large;
