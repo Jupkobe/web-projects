@@ -7,7 +7,7 @@ dayjs.extend(timezone);
 
 
 async function fetchTimeZones() {
-    let response = await fetch("http://worldtimeapi.org/api/timezone");
+    let response = await fetch("https://worldtimeapi.org/api/timezone"); 
     return await response.json();
 }
 
