@@ -1,3 +1,5 @@
+import autoAnimate from "@formkit/auto-animate";
+
 function displayTodos() {
     const localTodos = JSON.parse(localStorage.getItem("todos"));
 
@@ -19,7 +21,7 @@ function addTodo(e) {
     e.target.firstElementChild.value = "";
 
     if (title == "burhanaltintop") { // Little surprise
-        document.body.style.backgroundImage = "url('./burhan_altintop.jpg')";
+        document.body.style.backgroundImage = "url('/burhan_altintop.jpg')";
         setTimeout(() => {
             document.body.style.backgroundImage = "";
         }, 5000);
@@ -82,7 +84,6 @@ function deleteTodo(e) {
 function deleteTodoLocal(id) {
     let localTodos = JSON.parse(localStorage.getItem("todos"));
 
-        
     localTodos = localTodos.filter((todo) => {
         return todo.id != id;
     });
@@ -91,19 +92,18 @@ function deleteTodoLocal(id) {
 }
 
 function deleteTodoFromDOM(todoElem) {
-    todoElem.remove();
+    const parentElement = document.querySelector("#todo-list");
+    parentElement.removeChild(todoElem);
 }
 
 
 function toggleTodo(e) {
+    if (!e.target.classList.contains("todo")) {
+        if (e.target.tagName != "P") return;   
+    }
     const todoElem = e.target.closest("div");
-
-    if (!todoElem.classList.contains("todo")) return;
-
-
-    toggleTodoLocal(todoElem.dataset.id);
-    toggleTodoDOM(todoElem);
-    displayTodos();
+        toggleTodoLocal(todoElem.dataset.id);
+        toggleTodoDOM(todoElem);
 }
 
 
@@ -121,13 +121,19 @@ function toggleTodoLocal(id) {
 
 
 function toggleTodoDOM(todoElem) {
+    const parentElement = document.querySelector("#todo-list");
     if (todoElem.dataset.completed == "false") {
         todoElem.classList.add("completed");
         todoElem.dataset.completed = "true";
+        parentElement.removeChild(todoElem);
+        parentElement.append(todoElem);
     } else {
         todoElem.classList.remove("completed");
         todoElem.dataset.completed = "false";
+        parentElement.removeChild(todoElem);
+        parentElement.prepend(todoElem);
     }
+
 }
 
 
@@ -135,6 +141,12 @@ function init() {
     if (!localStorage.getItem("todos")) {
         localStorage.setItem("todos", JSON.stringify([]));
     }
+    const todoListElem = document.querySelector("#todo-list");
+    autoAnimate(todoListElem, {
+        duration: 150,
+        easing: 'ease-in-out',
+        disrespectUserMotionPreference: false
+      });
     
     document.addEventListener("DOMContentLoaded", displayTodos);
     document.querySelector("form").addEventListener("submit", addTodo);
