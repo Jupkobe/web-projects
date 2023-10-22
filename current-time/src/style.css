@@ -40,6 +40,11 @@ a:visited {
 	text-align: right;
 }
 
+select {
+	padding: 3px;
+	font-size: 1rem;
+}
+
 #clock {
 	font-size: 8rem;
 }
