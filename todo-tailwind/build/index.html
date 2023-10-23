@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo App</title>
+    <meta name="keywords" content="todo, local, jupkobe">
+    <meta name="description" content="A local storage todo app.">
+    <meta name="author" content="Eyüp Gültekin | Jupkobe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ca08526d1.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white dark:bg-slate-800 text-black dark:text-white min-h-screen">
+    <div class="w-full flex justify-center items-center p-4">
+        <div id="app" class="bg-slate-100 dark:bg-slate-700 w-full flex flex-col border border-black shadow-md rounded-md items-center p-4 sm:w-1/3">
+            <h1 class="mb-6 text-2xl font-bold">Todo App</h1>
+            <div id="inputs" class="w-full flex flex-wrap justify-center pb-4 mb-2 border-b border-b-black">
+                <form class="w-full flex justify-between gap-1">
+                    <input type="text" class="border border-black dark:bg-slate-400 rounded-md py-1 px-2 w-full" />
+                    <button class="border border-black dark:bg-slate-500 rounded-md py-1 px-2">Submit</button>
+                </form>
+            </div>
+            <div id="todo-list" class="w-full flex flex-col py-4 justify-around">
+            </div>
+            <footer>
+                <p>Made by <strong><a class="text-black dark:text-white visited:text-black dark:visited:text-white" href="https://github.com/Jupkobe">Jupkobe</a></strong></p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+<!-- 
+
+    <div id="todo-list">
+    </div>
+    <footer>
+        <p>Made by <strong><a href="https://github.com/Jupkobe">Jupkobe</a></strong></p>
+    </footer>
+
+ -->
+</html>

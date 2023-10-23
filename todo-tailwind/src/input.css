@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.todo {
+    @apply flex items-center h-12 justify-between w-full border border-black p-2 mb-1 text-black dark:text-white rounded
+}
+
+.todo i {
+    @apply mx-1 text-xl
+}
+
+.completed {
+    @apply bg-slate-300 dark:bg-slate-800
+}
+
+.completed p {
+    @apply line-through
+}
