@@ -1,0 +1,23 @@
+{
+  "name": "current-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
+    "prettier": "npx prettier --write '**/*.html'"
+  },
+  "author": "Jupkobe",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "micromodal": "^0.4.10",
+    "tailwindcss": "^3.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

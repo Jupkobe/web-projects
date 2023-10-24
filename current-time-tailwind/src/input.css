@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.micromodal-slide {
+    @apply hidden
+}
+  
+.micromodal-slide.is-open {
+    @apply block
+}

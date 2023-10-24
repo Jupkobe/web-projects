@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Time</title>
+    <meta name="keywords" content="time, timezone, current_time">
+    <meta name="description" content="Current time with time zones.">
+    <meta name="author" content="Eyüp Gültekin | Jupkobe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+	<script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="/src/modal.css"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1ca08526d1.js" crossorigin="anonymous"></script>
+</head>
+<body class="min-h-screen">
+    <div class="w-full h-screen flex justify-center items-center p-4">
+        <div id="app" class="bg-gray-100 w-full h-4/5 flex flex-col justify-between items-center border border-black rounded-md p-4 sm:w-3/5">
+            <h1 class="text-5xl font-semibold">Current Time</h1>
+
+            <div id="date-and-time" class="text-right">
+                <h4 id="timezone" class="inline color text-gray-500 font-medium"></h4>
+                <i class="fa-solid fa-pen-to-square inline cursor-pointer text-gray-700"></i>
+                <h1 id="clock" class="text-7xl sm:text-9xl"></h1>
+                <h3 id="date"  class="text-2xl"></h3>
+            </div>
+            
+            <footer class="justify-end">
+                <p>Made by <strong><a href="https://github.com/Jupkobe" class="visited:text-black">Jupkobe</a></strong></p>
+            </footer>
+        </div>
+    </div>
+    <div class="modal micromodal-slide font-serif" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-60 flex justify-center items-center" tabindex="-1" data-micromodal-close>
+            <div class="modal__container bg-gray-200 p-8 max-w-[500px] max-h-screen rounded overflow-y-auto box-border" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <header class="modal__header flex justify-between items-center content-['\2715']">
+                    <h2 class="modal__title my-0 font-semibold text-xl text-black box-border" id="modal-1-title">
+                        Time Zone
+                    </h2>
+                    <button class="modal__close bg-transparent text-2xl border-0 before:content-['\2715']" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="modal__content my-8 leading-6 text-black text-opacity-80" id="modal-1-content">
+                    <form>
+                        <label for="tz">Pick a time zone:</label>
+                        <select id="tz" class="p-1 text-base"></select>
+                    </form>
+                </main>
+                <footer class="modal__footer">
+                    <button class="modal__btn modal__btn-primary text-sm px-4 py-2 text-opacity-80 rounded border border-black cursor-pointer overflow-visible m-0 will-change-transform transform duration-200 ease-out focus:scale-105 hover:scale-105 bg-black text-white" id="submit">Select</button>
+                    <button class="modal__btn text-sm px-4 py-2 bg-gray-300 text-black text-opacity-80 rounded border border-black cursor-pointer overflow-visible m-0 will-change-transform" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
