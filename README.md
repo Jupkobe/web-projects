@@ -7,7 +7,7 @@ This is a basic too application project. You can add/delete/complete your todos.
 ![todo-tailwind](https://github.com/Jupkobe/web-projects/assets/84783072/f4bc78f7-ef69-4775-9742-1dc67be4869a)
 
 
-You can try this on jupkobe-todo.vercel.app
+You can try this on https://jupkobe-todo.vercel.app
 
 
 ### Current Time (Tailwind CSS)
@@ -22,7 +22,7 @@ Time zones can be changed with the button next to the current time zone. Zones a
 ![curr-time-tailwind-2](https://github.com/Jupkobe/web-projects/assets/84783072/d4a07fa3-a4c7-4302-938b-912eefa795c2)
 
 
-You can try this on jupkobe-time.vercel.app
+You can try this on https://jupkobe-time.vercel.app
 
 
 ### GitHub Profile Fetcher
