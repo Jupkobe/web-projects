@@ -9,10 +9,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 	<script src="js/main.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="/src/modal.css"> -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -20,12 +18,14 @@
 </head>
 <body class="min-h-screen">
     <div class="w-full h-screen flex justify-center items-center p-4">
-        <div id="app" class="bg-gray-100 w-full h-4/5 flex flex-col justify-between items-center border border-black rounded-md p-4 sm:w-3/5">
+        <div id="app" class="bg-gray-100 w-full h-4/5 flex flex-col justify-between items-center border border-black rounded-md p-4 sm:w-3/5 font-['roboto']">
             <h1 class="text-5xl font-semibold">Current Time</h1>
 
             <div id="date-and-time" class="text-right">
-                <h4 id="timezone" class="inline color text-gray-500 font-medium"></h4>
-                <i class="fa-solid fa-pen-to-square inline cursor-pointer text-gray-700"></i>
+                <span class="-mr-4">
+                    <h4 id="timezone" class="inline color text-gray-500 font-medium"></h4>
+                    <i class="fa-solid fa-pen-to-square inline cursor-pointer text-gray-700 opacity-30 hover:opacity-100"></i>
+                </span>
                 <h1 id="clock" class="text-7xl sm:text-9xl"></h1>
                 <h3 id="date"  class="text-2xl"></h3>
             </div>
