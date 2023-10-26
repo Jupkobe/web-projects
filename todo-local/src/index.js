@@ -133,7 +133,6 @@ function toggleTodoDOM(todoElem) {
         parentElement.removeChild(todoElem);
         parentElement.prepend(todoElem);
     }
-
 }
 
 

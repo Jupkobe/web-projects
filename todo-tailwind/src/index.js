@@ -1,3 +1,5 @@
+import autoAnimate from "@formkit/auto-animate";
+
 function displayTodos() {
     const localTodos = JSON.parse(localStorage.getItem("todos"));
 
@@ -90,18 +92,19 @@ function deleteTodoLocal(id) {
 }
 
 function deleteTodoFromDOM(todoElem) {
-    todoElem.remove();
+    const parentElement = document.querySelector("#todo-list");
+    parentElement.removeChild(todoElem);
 }
 
 
 function toggleTodo(e) {
+    if (!e.target.classList.contains("todo")) {
+        if (e.target.tagName != "P") return;   
+    }
+
     const todoElem = e.target.closest("div");
-
-    if (!todoElem.classList.contains("todo")) return;
-
     toggleTodoLocal(todoElem.dataset.id);
     toggleTodoDOM(todoElem);
-    displayTodos();
 }
 
 
@@ -119,12 +122,17 @@ function toggleTodoLocal(id) {
 
 
 function toggleTodoDOM(todoElem) {
+    const parentElement = document.querySelector("#todo-list");
     if (todoElem.dataset.completed == "false") {
         todoElem.classList.add("completed");
         todoElem.dataset.completed = "true";
+        parentElement.removeChild(todoElem);
+        parentElement.append(todoElem);
     } else {
         todoElem.classList.remove("completed");
         todoElem.dataset.completed = "false";
+        parentElement.removeChild(todoElem);
+        parentElement.prepend(todoElem);
     }
 }
 
@@ -133,12 +141,18 @@ function init() {
     if (!localStorage.getItem("todos")) {
         localStorage.setItem("todos", JSON.stringify([]));
     }
-    
-    document.addEventListener("DOMContentLoaded", displayTodos);
+    const todoListElem = document.querySelector("#todo-list");
+    autoAnimate(todoListElem, {
+        duration: 150,
+        easing: 'ease-in-out',
+        disrespectUserMotionPreference: false
+    });
+
+    displayTodos();    
     document.querySelector("form").addEventListener("submit", addTodo);
     document.querySelector("#todo-list").addEventListener("click", deleteTodo);
     document.querySelector("#todo-list").addEventListener("click", toggleTodo);
 }
 
-init();
 
+document.addEventListener("DOMContentLoaded", init);
