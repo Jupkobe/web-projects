@@ -7,7 +7,7 @@
 }
 
 .todo i {
-    @apply mx-1 text-xl
+    @apply mx-1 text-xl hidden
 }
 
 .completed {
@@ -16,4 +16,8 @@
 
 .completed p {
     @apply line-through
+}
+
+.completed i {
+    @apply block
 }
