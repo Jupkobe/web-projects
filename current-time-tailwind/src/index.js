@@ -28,19 +28,19 @@ function setDateLoop(userTZ = dayjs.tz.guess()) {
 }
 
 
+function updateDateAndTime(dateObj) {
+    const dateElem = document.querySelector("#date");
+    dateElem.textContent = `${dateObj.format("dddd, D MMM YYYY")}`;
+    
+    const clockElem = document.querySelector("#clock");
+    clockElem.textContent = `${dateObj.format("HH:mm:ss")}`;
+}
+
+
 function displayTimeZone(userTZ) {
     const tzElem = document.querySelector("#timezone");
 
     tzElem.innerHTML = `${userTZ} `;
-}
-
-
-function updateDateAndTime(dateObj) {
-    const dateElem = document.querySelector("#date");
-    dateElem.textContent = `${dateObj.format("dddd, D MMM YYYY")}`;
-
-    const clockElem = document.querySelector("#clock");
-    clockElem.textContent = `${dateObj.format("HH:mm:ss")}`;
 }
 
 
